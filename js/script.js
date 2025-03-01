@@ -43,5 +43,5 @@ document
 
     document.getElementById(
       "activity-log"
-    ).innerHTML += `<p class="text-md font-semibold">You have completed the task: ${taskTitle} at ${new Date().toLocaleTimeString()}</p>`;
+    ).innerHTML += `<p class="text-md font-semibold bg-blue-200 mt-3 p-2 rounded-md">You have completed the task: ${taskTitle} at ${new Date().toLocaleTimeString()}</p>`;
   });
