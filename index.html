@@ -7,7 +7,7 @@
     <!-- tailwindcss -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body class="bg-gray-100 max-w-screen-xl mx-auto">
+  <body class="bg-gray-100 max-w-screen-xl mx-auto mt-4">
     <header class="bg-white px-4 py-2 rounded-md pt-3">
       <nav class="flex justify-between">
         <div class="flex items-center">
@@ -21,7 +21,7 @@
             <input type="checkbox" name="" id="" />
             <p
               id="completed-count"
-              class="completed-count font-bold text-black text-xl"
+              class="completed-count font-bold text-blue-800 text-xl"
             >
               23
             </p>
@@ -47,12 +47,12 @@
           >
             <div><input type="checkbox" name="" id="" /></div>
             <div>
-              <p>Task Assigned </p>
+              <p class="font-bold text-gray-600">Task Assigned </p>
               <p
                 id="task-count"
-                class="task-count font-bold text-black font-bold"
+                class="task-count font-bold text-blue-800 text-xl"
               >
-                <span>0</span>6
+                6
               </p>
             </div>
           </div>
@@ -62,7 +62,7 @@
           >
             <div><img src="img/board.png" alt="" /></div>
             <div>
-              <p>
+              <p class="text-white font-bold">
                 Discover Something <br />
                 New Today!
               </p>
@@ -73,110 +73,122 @@
           >
             <div><img src="img/calender.png" alt="" /></div>
             <div>
-              <p>Task Assigned </p>
-              <h3 id="new-date"></h3>
+              <p class="font-bold text-gray-600">Task Assigned </p>
+              <h3 id="new-date" class="font-bold text-gray-600"></h3>
             </div>
           </div>
         </div>
-        <div id="task-container" class="grid grid-cols-3 gap-10">
-          <div class="space-y-3 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5">
+        <div id="task-container" class="grid grid-cols-3 gap-6">
+          <div
+            class="add-history space-y-2 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5"
+          >
             <button class="bg-gray-300 px-4 py-2 rounded-md">ShopEase</button>
             <h2 class="text-xl font-bold Clear-History">
               Fix Mobile Button Issue
             </h2>
-            <p class="w-60 bg-gray-300 rounded-md p-2">
+            <p class="w-60 bg-gray-300 rounded-md p-2 h-32">
               Debug using Chrome DevTools, check for overlapping elements, and
               ensure onClick works properly and ensure onClick works properly
             </p>
             <div class="flex justify-between">
               <div>
                 <p>Deadline</p>
-                <h4>21 March 2025</h4>
+                <h4 class="date font-bold text-gray-600"></h4>
               </div>
               <button class="completed-btn bg-blue-500 px-4 py-2 rounded-md">
                 Completed
               </button>
             </div>
           </div>
-          <div class="space-y-3 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5">
+          <div
+            class="add-history space-y-2 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5"
+          >
             <button class="bg-gray-300 px-4 py-2 rounded-md">CloudSync</button>
             <h2 class="text-xl font-bold">Add Dark Mode</h2>
-            <p class="w-60 bg-gray-300 rounded-md p-2">
+            <p class="w-60 bg-gray-300 rounded-md p-2 h-32">
               Store the user's preference in localStorage, update CSS variables
               dynamically, and apply a smooth transition effect.
             </p>
             <div class="flex justify-between">
               <div>
                 <p>Deadline</p>
-                <h4>21 March 2025</h4>
+                <h4 class="date font-bold text-gray-600">21 March 2025</h4>
               </div>
               <button class="bg-blue-500 px-4 py-2 rounded-md completed-btn">
                 Completed
               </button>
             </div>
           </div>
-          <div class="space-y-3 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5">
+          <div
+            class="add-history space-y-2 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5"
+          >
             <button class="bg-gray-300 px-4 py-2 rounded-md">SwiftPay</button>
             <h2 class="text-xl font-bold">Optimize Home page </h2>
-            <p class="w-60 bg-gray-300 rounded-md p-2">
+            <p class="w-60 bg-gray-300 rounded-md p-2 h-32">
               Debug using Chrome DevTools, check for overlapping elements, and
               ensure onClick works properly
             </p>
             <div class="flex justify-between">
               <div>
                 <p>Deadline</p>
-                <h4>21 March 2025</h4>
+                <h4 class="date font-bold text-gray-600">21 March 2025</h4>
               </div>
               <button class="bg-blue-500 px-4 py-2 rounded-md completed-btn">
                 Completed
               </button>
             </div>
           </div>
-          <div class="space-y-3 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5">
+          <div
+            class="add-history space-y-2 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5"
+          >
             <button class="bg-gray-300 px-4 py-2 rounded-md">Meta</button>
             <h2 class="text-xl font-bold">Add new emoji 🤲</h2>
-            <p class="w-60 bg-gray-300 rounded-md p-2">
+            <p class="w-60 bg-gray-300 rounded-md p-2 h-32">
               Debug using Chrome DevTools, check for overlapping elements, and
               ensure onClick works properly.
             </p>
             <div class="flex justify-between">
               <div>
                 <p>Deadline</p>
-                <h4>21 March 2025</h4>
+                <h4 class="date font-bold text-gray-600">21 March 2025</h4>
               </div>
               <button class="bg-blue-500 px-4 py-2 rounded-md completed-btn">
                 Completed
               </button>
             </div>
           </div>
-          <div class="space-y-3 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5">
+          <div
+            class="add-history space-y-2 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5"
+          >
             <button class="bg-gray-300 px-4 py-2 rounded-md">Google LLC</button>
             <h2 class="text-xl font-bold">Integrate OpenAI API</h2>
-            <p class="w-60 bg-gray-300 rounded-md p-2">
+            <p class="w-60 bg-gray-300 rounded-md p-2 h-32">
               Debug using Chrome DevTools, check for overlapping elements, and
               ensure onClick works properly
             </p>
             <div class="flex justify-between">
               <div>
                 <p>Deadline</p>
-                <h4>21 March 2025</h4>
+                <h4 class="date font-bold text-gray-600">21 March 2025</h4>
               </div>
               <button class="bg-blue-500 px-4 py-2 rounded-md completed-btn">
                 Completed
               </button>
             </div>
           </div>
-          <div class="space-y-3 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5">
+          <div
+            class="add-history space-y-2 w-72 p-5 bg-[#3751fd6e] rounded-md mt-5"
+          >
             <button class="bg-gray-300 px-4 py-2 rounded-md">Glassdoar</button>
             <h2 class="text-xl font-bold">Improve Job searching</h2>
-            <p class="w-60 bg-gray-300 rounded-md p-2">
+            <p class="w-60 bg-gray-300 rounded-md p-2 h-32">
               Debug using Chrome DevTools, check for overlapping elements, and
               ensure onClick works properly
             </p>
             <div class="flex justify-between">
               <div>
                 <p>Deadline</p>
-                <h4>21 March 2025</h4>
+                <h4 class="date font-bold text-gray-600">21 March 2025</h4>
               </div>
               <button class="bg-blue-500 px-4 py-2 rounded-md completed-btn">
                 Completed
@@ -195,10 +207,10 @@
               <img src="img/activity.png" alt="" />
             </div>
             <div>
-              <p>Activity Log</p>
+              <p class="text-gray-600">Activity Log</p>
               <button
                 id="clear-log"
-                class="bg-[#909EF8] mt-2 px-4 py-2 rounded-md"
+                class="bg-[#909EF8] mt-2 px-4 py-2 rounded-md text-white"
               >
                 Clear History
               </button>

@@ -7,7 +7,7 @@
     <!-- tailwindcss -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
-  <body>
+  <body class="bg-gray-100 max-w-screen-xl mx-auto">
     <header class="bg-white px-4 py-2 rounded-md pt-3">
       <nav class="flex justify-between">
         <div class="flex items-center">
@@ -30,6 +30,97 @@
         </div>
       </nav>
     </header>
+
+    <main  >
+     <div class="mt-5 bg-white p-4 rounded-md">
+      <h2 class="text-gray-800 font-bold text-xl">1.What are the different ways to select an element in the DOM?</h2>
+      <h4 class="text-gray-700 font-bold">Answer</h4>
+      <p class="text-gray-600">The different ways to select an element in the DOM (Document Object Model)</p>
+      <ol class="ml-5 text-gray-600">
+        <li>1. getElementById</li>
+        <li>2. getElementsByClassName</li>
+        <li>3. getElementsByTagName</li>
+        <li>4. querySelectorAll</li>
+        <li>5. querySelector</li>
+        <li>6. getElementsByName</li>
+      </ol>
+     </div>
+     <div class="mt-5 bg-white p-4 rounded-md">
+      <h2 class="text-gray-800 font-bold text-xl">2. What is the difference between innerHTML, innerText, and textContent ?</h2>
+      <h4 class="text-gray-700 font-bold">Answer</h4>
+      <p class="text-gray-600">Great question! Let's break down the differences between innerHTML, innerText, and textContent</p>
+      <p class="text-gray-600"><span class="font-bold">innerHTML :</span><br>
+        innerHTML is a property in the Document Object Model (DOM) that allows you to get or set the HTML content inside an element.. <br>
+        1. It's more performance-intensive because it causes the browser to reparse and re-render the entire HTML structure. <br>
+        
+        2. Useful for retrieving or changing the HTML structure, including tags and attributes.<br>
+        3. It handles the full HTML content, including tags and their attributes.
+      </p>
+      <p class="text-gray-600"><span class="font-bold">innerText :</span><br>
+        innerText is a property in JavaScript that retrieves or sets the visible text content of an element, considering CSS styles <br>
+        1.It considers CSS styles when retrieving text.<br>
+        2. It can be used to change the text content of an element.<br>
+        3.It triggers layout reflow, making it slower than textContent. <br>
+      </p>
+      <p class="text-gray-600"><span class="font-bold"> textContent :</span><br>
+        textContent is a property that retrieves or sets the raw text inside an element, including hidden text, without considering CSS styles.<br>
+        1. Ignores HTML tags (returns only the text).<br>
+        2. Faster than innerText because it doesn’t trigger reflow/repaint.<br>
+        3. Modifying Text Content. <br>
+      </p>
+    
+      
+     </div>
+     <div class="mt-5 bg-white p-4 rounded-md">
+       <h2 class="text-gray-800 font-bold text-xl">3. What is event delegation in the DOM?</h2>
+      <h4 class="text-gray-700 font-bold">Answer</h4>
+      <p class="text-gray-600">Event delegation is a powerful technique in the DOM that involves using a single event listener to handle events for multiple elements. where an event propagates from the element to the outermost elements.</p>
+      <p class="text-gray-600">
+        1. Event Bubble: When an event is on an element, it triangulates on the element between it and then bubbles up to its parent element, and so on, not grouping it into the parent element.<br>
+        2. You make an event listener with a common ancestor element. This reduces memory usage and improves performance, especially when working with many components.
+        
+        
+      </p>
+    
+      
+     </div>
+     <div class="mt-5 bg-white p-4 rounded-md"> 
+      <h2 class="text-gray-800 font-bold text-xl">4. What is event bubbling in the DOM?</h2>
+      <h4 class="text-gray-700 font-bold">Answer</h4>
+      <p class="text-gray-600">Event bubbling is a concept in the Document Object Model (DOM) where an event triggered on a specific element "bubbles up" to its parent elements and eventually to the root of the document. This means that an event can be captured and handled at multiple levels of the DOM hierarchy.</p>
+      <p class="text-gray-600">
+        When an event occurs on an element, it first triggers on that element (the target element). Then, it propagates up through its parent elements (ancestor elements) until it reaches the root element the document object.
+      </p>
+    
+      <p class="text-gray-600">
+       1. Event Target Phase: The event is triggered on the target element the button. <br>
+
+        2. Event Bubbling Phase: The event bubbles up to the parent element (the div) and continues up to the root element document.
+      </p>
+    
+      
+     </div>
+     <div class="mt-5 bg-white p-4 rounded-md">
+       <h2 class="text-gray-800 font-bold text-xl">5. How do you create, add, and remove elements using JavaScript?</h2>
+      <h4 class="text-gray-700 font-bold">Answer</h4>
+
+      <p class="text-gray-600">creating, adding, and removing elements in JavaScript involves generating the element, inserting it into the desired position in the DOM</p>
+      <p class="text-gray-600">1. Creating Elements:
+        create a new element, you use the document.createElement() method, which allows you to generate any HTML element you need.</p>
+      <p class="text-gray-600">
+        Adding Elements:
+             Once you've created an element, you can add it to the DOM using methods like appendChild(), add() or append(). You'll typically specify a parent element to which the new element will be added.
+      </p>
+    
+      <p class="text-gray-600">
+        Removing Elements:
+        The remove an element from the DOM, you use the removeChild() method or the remove() method. With removeChild(), you need to specify the parent element from which you're removing the child element. The remove() method directly deletes the element from the DOM without needing to specify the parent.
+      </p>
+    
+      
+     </div>
+
+    </main>
 
     <script>document.getElementById("Back-btn ").addEventListener("click", function () {
         console.log("object");

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Date</title>
+    <style>
+      .task-card {
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+      }
+      .date {
+        font-weight: bold;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="task-card">
+      <h3>Fix Mobile Button Issue</h3>
+      <p><strong>Deadline:</strong> <span class="date">21 March 2025</span></p>
+      <p>
+        <strong>Current Date:</strong>
+        <span id="current-date" class="date"></span>
+      </p>
+    </div>
+
+    <script>
+      // Get the current date
+      const today = new Date();
+
+      // Format the date as "1 March 2025"
+      const options = { day: "numeric", month: "long", year: "numeric" };
+      const formattedDate = today.toLocaleDateString("en-GB", options);
+
+      // Insert the current date into the HTML
+      document.querySelectorAll("current-date").textContent = formattedDate;
+    </script>
+  </body>
+</html>

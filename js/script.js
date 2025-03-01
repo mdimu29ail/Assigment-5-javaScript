@@ -13,13 +13,23 @@ function changeBackgroundColor() {
   document.body.style.backgroundColor = randomColor;
 }
 
+const today = new Date().toLocaleDateString("en-GB", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+});
+const dateElements = document.querySelectorAll(".date");
+for (let i = 0; i < dateElements.length; i++) {
+  dateElements[i].textContent = today;
+}
+
 document
   .getElementById("task-container")
   .addEventListener("click", function (event) {
     let button = event.target;
     if (!button.classList.contains("completed-btn") || button.disabled) return;
 
-    alert("Task marked as completed!");
+    alert("board update successful");
     button.disabled = true;
     button.classList.replace("bg-blue-500", "bg-gray-400");
 
@@ -27,7 +37,7 @@ document
     document.getElementById("completed-count").textContent++;
 
     let taskTitle = button
-      .closest(".space-y-3")
+      .closest(".add-history")
       .querySelector("h2").textContent;
     taskTitle = taskTitle === "Fix Mobile Button Issue" ? "null" : taskTitle;
 
