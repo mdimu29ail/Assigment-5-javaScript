@@ -6,8 +6,7 @@ document.getElementById("clear-log").addEventListener("click", function () {
 });
 
 document.getElementById("discover-box").addEventListener("click", function () {
-  console.log("hi");
-  window.location.href = "./main.html";
+  window.location.href = "../main.html";
 });
 function changeBackgroundColor() {
   const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);

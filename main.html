@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quesion</title>
+    <!-- tailwindcss -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="bg-white px-4 py-2 rounded-md pt-3">
+      <nav class="flex justify-between">
+        <div class="flex items-center">
+          <img class="w-10 h-10" src="img/logo.png" alt="" />
+          <h2 class="text-3xl">Dev<span class="font-bold">Board</span></h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <div
+          <button id="Back-btn " class="bg-blue-500 px-4 py-2 rounded-md font-semibold cursor-pointer">
+            Back Btn
+          </button>
+          </div>
+
+          <div
+            class="flex w-10 h-10 rounded-full bg-slate-400 justify-center items-center"
+            onclick="changeBackgroundColor()"
+          >
+            <img class="w-6 h-6" src="img/theme-btn.png" alt="" />
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <script>document.getElementById("Back-btn ").addEventListener("click", function () {
+        console.log("object");
+        window.location.href = "../index.html";
+      });
+      </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
